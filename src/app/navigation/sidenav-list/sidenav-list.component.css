@@ -8,3 +8,8 @@ a:hover, a:active{
   width: 100px;
   display:inline-block;
 }
+.nav-caption2{
+  padding-left: 1rem;
+  width: 100px;
+  display:inline-block;
+}

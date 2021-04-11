@@ -12,6 +12,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
 
 
 const materials= [
@@ -26,7 +27,8 @@ const materials= [
   MatCardModule,
   MatTableModule,
   MatPaginatorModule,
-  MatInputModule
+  MatInputModule,
+  MatSortModule
 
 ]
 

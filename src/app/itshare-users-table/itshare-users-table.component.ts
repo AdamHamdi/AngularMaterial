@@ -14,8 +14,9 @@ import { Subscription }from 'rxjs';
 export class ItshareUsersTableComponent implements OnInit {
   @ViewChild(MatPaginator) pager:MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+  selectedRow;
   dataSource: MatTableDataSource<Iuser>;
-  displayedColumns: string[] = ['id', 'name', 'userName', 'email','city'];
+  displayedColumns: string[] = ['id', 'name', 'username', 'email','city'];
   subscribe: Subscription;
   constructor(private services:UsersService) { }
 
@@ -27,9 +28,14 @@ export class ItshareUsersTableComponent implements OnInit {
     });
 
   }
-  findUserByName(name){}
+  onRowClicked(row){
+    this.selectedRow=row;
 
-  applayFilter(filterValue: string){
+  }
+  findUserByName(name : HTMLInputElement){
+    this.applyFilter(name.value);
+  }
+  applyFilter(filterValue: string){
     filterValue= filterValue.trim();
     filterValue= filterValue.toLowerCase();
      this.dataSource.filter = filterValue;

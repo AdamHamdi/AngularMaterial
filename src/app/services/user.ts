@@ -1,7 +1,7 @@
 export interface Iuser{
   id:number;
   name:string;
-  userName:string;
+  username:string;
   email:string;
   address: string;
 }

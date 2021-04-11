@@ -28,6 +28,12 @@ export class ItshareUsersTableComponent implements OnInit {
 
   }
   findUserByName(name){}
+
+  applayFilter(filterValue: string){
+    filterValue= filterValue.trim();
+    filterValue= filterValue.toLowerCase();
+     this.dataSource.filter = filterValue;
+  }
   ngOnDestroy(){
     this.subscribe.unsubscribe();
   }

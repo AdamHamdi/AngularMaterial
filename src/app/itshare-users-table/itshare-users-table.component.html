@@ -1,4 +1,10 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div>
+  <mat-form-field class="input-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Find users" #name (keyup)="findUserByName(name)">
+  </mat-form-field>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
@@ -37,7 +43,7 @@
 </table>
 <mat-paginator [length]="100"
               [pageSize]="3"
-              [pageSizeOptions]="[5, 10, 25, 100]">
+              [pageSizeOptions]="[3, 6, 18, 30]">
 </mat-paginator>
 
 

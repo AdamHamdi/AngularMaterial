@@ -3,6 +3,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Iuser } from '../services/user';
 import { UsersService } from './../services/users.service';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { Subscription }from 'rxjs';
 
 @Component({
   selector: 'app-itshare-users-table',
@@ -10,17 +12,23 @@ import { MatPaginator } from '@angular/material/paginator';
   styleUrls: ['./itshare-users-table.component.css']
 })
 export class ItshareUsersTableComponent implements OnInit {
-  @ViewChild(MatPaginator) paginator:MatPaginator;
-  dataSource;
+  @ViewChild(MatPaginator) pager:MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  dataSource: MatTableDataSource<Iuser>;
   displayedColumns: string[] = ['id', 'name', 'userName', 'email','city'];
+  subscribe: Subscription;
   constructor(private services:UsersService) { }
 
-  ngOnInit(): void {
-    this.services.getusers().subscribe(data=>{
+  ngOnInit() {
+   this.subscribe= this.services.getusers().subscribe(data=>{
       this.dataSource = new MatTableDataSource<Iuser>(data);
-      this.dataSource.paginator= this.paginator;
+      this.dataSource.paginator= this.pager;
+      this.dataSource.sort=this.sort;
     });
 
   }
-
+  findUserByName(name){}
+  ngOnDestroy(){
+    this.subscribe.unsubscribe();
+  }
 }

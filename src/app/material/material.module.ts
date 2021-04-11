@@ -13,7 +13,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
 import {MatSortModule} from '@angular/material/sort';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 const materials= [
   CommonModule,
@@ -28,7 +28,8 @@ const materials= [
   MatTableModule,
   MatPaginatorModule,
   MatInputModule,
-  MatSortModule
+  MatSortModule,
+  MatDialogModule
 
 ]
 

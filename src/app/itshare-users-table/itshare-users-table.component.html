@@ -1,7 +1,11 @@
 <div>
+<div class="example-button-row">
+  <button mat-raised-button color="accent" (click)="openUserDialog()"> Add User</button>
+</div>
   <mat-form-field class="input-full-width">
     <mat-label>Name</mat-label>
     <input matInput placeholder="Find users" #name (keyup)="findUserByName(name)">
+
   </mat-form-field>
 </div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>

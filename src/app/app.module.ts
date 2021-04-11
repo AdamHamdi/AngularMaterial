@@ -13,6 +13,7 @@ import { UsersService } from './services/users.service';
 import { NewsService } from './services/news.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ItshareUsersTableComponent } from './itshare-users-table/itshare-users-table.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ItshareUsersTableComponent } from './itshare-users-table/itshare-users-
     SidenavListComponent,
     DevelopmentComponent,
     ItshareSideNavComponent,
-    ItshareUsersTableComponent
+    ItshareUsersTableComponent,
+    AddUserComponent
   ],
   imports: [
 

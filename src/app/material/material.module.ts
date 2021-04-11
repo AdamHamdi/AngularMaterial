@@ -10,7 +10,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 const materials= [
@@ -23,7 +23,8 @@ const materials= [
   MatSidenavModule,
   MatListModule,
   MatCardModule,
-  MatTableModule
+  MatTableModule,
+  MatPaginatorModule
 
 ]
 

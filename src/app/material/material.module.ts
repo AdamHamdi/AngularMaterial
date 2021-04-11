@@ -9,7 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -22,8 +22,8 @@ const materials= [
   MatToolbarModule,
   MatSidenavModule,
   MatListModule,
-  MatCardModule
-
+  MatCardModule,
+  MatTableModule
 
 ]
 

@@ -9,9 +9,10 @@ import { MaterialModule } from './material/material.module';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { DevelopmentComponent } from './development/development.component';
 import { ItshareSideNavComponent } from './itshare-side-nav/itshare-side-nav.component';
-
+import { UsersService } from './services/users.service';
 import { NewsService } from './services/news.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ItshareUsersTableComponent } from './itshare-users-table/itshare-users-table.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     SidenavListComponent,
     DevelopmentComponent,
-    ItshareSideNavComponent
+    ItshareSideNavComponent,
+    ItshareUsersTableComponent
   ],
   imports: [
+
 
   BrowserModule,
     AppRoutingModule,
@@ -30,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [NewsService],
+  providers: [NewsService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

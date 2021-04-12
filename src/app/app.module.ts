@@ -14,7 +14,13 @@ import { NewsService } from './services/news.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ItshareUsersTableComponent } from './itshare-users-table/itshare-users-table.component';
 import { AddUserComponent } from './add-user/add-user.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ItshareInstructorComponent } from './itshare-instructor/itshare-instructor.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     DevelopmentComponent,
     ItshareSideNavComponent,
     ItshareUsersTableComponent,
-    AddUserComponent
+    AddUserComponent,
+    ItshareInstructorComponent
   ],
   imports: [
 
@@ -34,11 +41,17 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule
 
   ],
   providers: [NewsService, UsersService],
   bootstrap: [AppComponent],
-  entryComponents: [AddUserComponent]
+  entryComponents: [AddUserComponent, ItshareInstructorComponent]
 })
 export class AppModule { }

@@ -7,6 +7,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { Subscription }from 'rxjs';
 import { AddUserComponent } from '../add-user/add-user.component';
+import { ItshareInstructorComponent } from './../itshare-instructor/itshare-instructor.component';
 
 @Component({
   selector: 'app-itshare-users-table',
@@ -17,6 +18,7 @@ export class ItshareUsersTableComponent implements OnInit {
   @ViewChild(MatPaginator) pager:MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   selectedRow;
+  showDataOfChildComponent;
   dataSource: MatTableDataSource<Iuser>;
   displayedColumns: string[] = ['id', 'name', 'username', 'email','city'];
   subscribe: Subscription;
@@ -31,12 +33,13 @@ export class ItshareUsersTableComponent implements OnInit {
 
   }
   openUserDialog(){
-  const dialogRef = this.dialog.open(AddUserComponent,{
+  const dialogRef = this.dialog.open(ItshareInstructorComponent,{
     width:'500px',
-    
+
     data : {}
   });
   dialogRef.afterClosed().subscribe(result=>{
+    this.showDataOfChildComponent=result;
     console.log(`Here is the dat result ${result}`)
   })
   }

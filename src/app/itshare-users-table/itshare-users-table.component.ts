@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Subscription }from 'rxjs';
 import { AddUserComponent } from '../add-user/add-user.component';
 import { ItshareInstructorComponent } from './../itshare-instructor/itshare-instructor.component';
+import { UserDetailsComponent } from './../user-details/user-details.component';
 
 @Component({
   selector: 'app-itshare-users-table',
@@ -20,7 +21,7 @@ export class ItshareUsersTableComponent implements OnInit {
   selectedRow;
   showDataOfChildComponent;
   dataSource: MatTableDataSource<Iuser>;
-  displayedColumns: string[] = ['id', 'name', 'username', 'email','city'];
+  displayedColumns: string[] = ['id', 'name', 'username', 'email','city', 'customDataColoumn'];
   subscribe: Subscription;
   constructor(private services:UsersService ,private dialog:MatDialog) { }
 
@@ -31,6 +32,17 @@ export class ItshareUsersTableComponent implements OnInit {
       this.dataSource.sort=this.sort;
     });
 
+  }
+  openUserDetailsDialog(){
+    const dialogRef = this.dialog.open(UserDetailsComponent,{
+      width:'500px',
+
+      data : {}
+    });
+    dialogRef.afterClosed().subscribe(result=>{
+      this.showDataOfChildComponent=result;
+      console.log(`Here is the dat result ${result}`)
+    })
   }
   openUserDialog(){
   const dialogRef = this.dialog.open(ItshareInstructorComponent,{

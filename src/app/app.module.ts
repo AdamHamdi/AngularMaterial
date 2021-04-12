@@ -21,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MatCardModule } from '@angular/material/card';
     ItshareSideNavComponent,
     ItshareUsersTableComponent,
     AddUserComponent,
-    ItshareInstructorComponent
+    ItshareInstructorComponent,
+    UserDetailsComponent
   ],
   imports: [
 
@@ -52,6 +54,6 @@ import { MatCardModule } from '@angular/material/card';
   ],
   providers: [NewsService, UsersService],
   bootstrap: [AppComponent],
-  entryComponents: [AddUserComponent, ItshareInstructorComponent]
+  entryComponents: [AddUserComponent, ItshareInstructorComponent,UserDetailsComponent]
 })
 export class AppModule { }

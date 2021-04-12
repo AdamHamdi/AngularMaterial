@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ItshareUsersTableComponent } from './../itshare-users-table/itshare-users-table.component';
 
 @Component({
   selector: 'app-user-details',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-
-  constructor() { }
+recievedRow;
+  constructor(
+    public dialogRef: MatDialogRef<ItshareUsersTableComponent>,
+    @Inject(MAT_DIALOG_DATA) public data:any
+  ) {
+    this.recievedRow=data;
+  }
 
   ngOnInit(): void {
   }

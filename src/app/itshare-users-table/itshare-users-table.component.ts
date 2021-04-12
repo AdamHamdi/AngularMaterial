@@ -35,14 +35,16 @@ export class ItshareUsersTableComponent implements OnInit {
   }
   openUserDetailsDialog(){
     const dialogRef = this.dialog.open(UserDetailsComponent,{
-      width:'500px',
+      width:'300px',
+      height:'240px',
+      data : {
+        name : this.selectedRow.name,
+        username : this.selectedRow.username,
+        email : this.selectedRow.email,
+        city : this.selectedRow.address.city,
+      }
 
-      data : {}
     });
-    dialogRef.afterClosed().subscribe(result=>{
-      this.showDataOfChildComponent=result;
-      console.log(`Here is the dat result ${result}`)
-    })
   }
   openUserDialog(){
   const dialogRef = this.dialog.open(ItshareInstructorComponent,{

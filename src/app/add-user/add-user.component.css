@@ -1,0 +1,8 @@
+div
+{height: 100px;}
+
+.mat-radio-button ~ .mat-radio-button{
+  margin-top:20px;
+  margin-left:16px;
+
+}

@@ -33,6 +33,7 @@ export class ItshareUsersTableComponent implements OnInit {
   openUserDialog(){
   const dialogRef = this.dialog.open(AddUserComponent,{
     width:'500px',
+    
     data : {}
   });
   dialogRef.afterClosed().subscribe(result=>{

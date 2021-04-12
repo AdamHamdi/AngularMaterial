@@ -14,6 +14,7 @@ import { NewsService } from './services/news.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ItshareUsersTableComponent } from './itshare-users-table/itshare-users-table.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,10 +33,12 @@ import { AddUserComponent } from './add-user/add-user.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [NewsService, UsersService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddUserComponent]
 })
 export class AppModule { }

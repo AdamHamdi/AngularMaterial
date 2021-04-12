@@ -14,6 +14,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
 import {MatSortModule} from '@angular/material/sort';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatRadioModule} from '@angular/material/radio';
 
 const materials= [
   CommonModule,
@@ -29,7 +30,8 @@ const materials= [
   MatPaginatorModule,
   MatInputModule,
   MatSortModule,
-  MatDialogModule
+  MatDialogModule,
+  MatRadioModule
 
 ]
 

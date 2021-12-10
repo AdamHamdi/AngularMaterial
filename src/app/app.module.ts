@@ -22,6 +22,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { NgBodyScrollLockModule } from 'ng-body-scroll-lock';
+import { SignaturePadModule } from 'angular2-signaturepad';
+
+
+
 
 @NgModule({
   declarations: [
@@ -36,8 +41,9 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     UserDetailsComponent
   ],
   imports: [
-
-
+    
+    SignaturePadModule,
+    NgBodyScrollLockModule,
   BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -7,7 +7,7 @@
 
         </app-header>
         <main style="border: 1px solid ;height: 200px;">
-
+<div style="width: 295px;height: 150px;">
             <signature-pad #sigPad></signature-pad>
 
             <b>value:</b>
@@ -16,6 +16,8 @@
             </pre>
 
             <button (click)="sigPad.clear()">Clear</button>
+        </div>
+        <br><br><br>
             <div class="col-md-4 text-right">
                 <button class="btn btn-success btn-block" (click)="SavePDF()">Download PDF</button>
             </div>

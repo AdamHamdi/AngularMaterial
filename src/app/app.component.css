@@ -8,3 +8,8 @@ mat-sidenav{width:250px;}
 main{
   padding:12px;
 }
+::ng-deep signature-pad canvas{
+  width: 100%!important;
+  height: 100%;
+  border: 1px solid!important;
+}

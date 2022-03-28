@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,7 +24,8 @@ import { MatCardModule } from '@angular/material/card';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { NgBodyScrollLockModule } from 'ng-body-scroll-lock';
 import { SignaturePadModule } from 'angular2-signaturepad';
-
+import { DragScrollModule } from 'ngx-drag-scroll';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -41,7 +42,8 @@ import { SignaturePadModule } from 'angular2-signaturepad';
     UserDetailsComponent
   ],
   imports: [
-    
+    MatDatepickerModule,
+    MatExpansionModule,
     SignaturePadModule,
     NgBodyScrollLockModule,
   BrowserModule,
@@ -55,7 +57,8 @@ import { SignaturePadModule } from 'angular2-signaturepad';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragScrollModule,
 
   ],
   providers: [NewsService, UsersService],
